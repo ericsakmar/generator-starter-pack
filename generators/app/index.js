@@ -48,6 +48,10 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('jshintrc'),
         this.destinationPath('.jshintrc')
       );
+    },
+
+    git: function() {
+      this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'))
     }
   },
 

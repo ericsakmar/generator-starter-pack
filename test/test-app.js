@@ -18,7 +18,8 @@ describe('starter-pack:app', function () {
       'bower.json',
       'package.json',
       '.editorconfig',
-      '.jshintrc'
+      '.jshintrc',
+      '.gitignore'
     ]);
   });
 });
