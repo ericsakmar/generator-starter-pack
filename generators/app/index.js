@@ -33,6 +33,10 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(this.templatePath('_bower.json'), this.destinationPath('bower.json'));
       this.fs.copy(this.templatePath('_Gruntfile.coffee'), this.destinationPath('Gruntfile.coffee'));
       this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'))
+    },
+
+    src: function() {
+      this.fs.copy(this.templatePath('src/app/index.jade'), this.destinationPath('src/app/index.jade'));
     }
   },
 

@@ -18,6 +18,9 @@ describe('starter-pack:app', function () {
       'bower.json',
       'package.json',
       'Gruntfile.coffee',
+      'src',
+      'src/app',
+      'src/app/index.jade',
       '.gitignore'
     ]);
   });
