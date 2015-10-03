@@ -37,9 +37,16 @@ module.exports = yeoman.generators.Base.extend({
 
     src: function() {
       this.fs.copy(this.templatePath('src/app/index.jade'), this.destinationPath('src/app/index.jade'));
+
       this.fs.copy(this.templatePath('src/app/includes/footer.jade'), this.destinationPath('src/app/includes/footer.jade'));
       this.fs.copy(this.templatePath('src/app/includes/head.jade'), this.destinationPath('src/app/includes/head.jade'));
       this.fs.copy(this.templatePath('src/app/includes/header.jade'), this.destinationPath('src/app/includes/header.jade'));
+
+      this.fs.copy(this.templatePath('src/app/styles/common.styl'), this.destinationPath('src/app/styles/common.styl'));
+      this.fs.copy(this.templatePath('src/app/styles/footer.styl'), this.destinationPath('src/app/styles/footer.styl'));
+      this.fs.copy(this.templatePath('src/app/styles/header.styl'), this.destinationPath('src/app/styles/header.styl'));
+      this.fs.copy(this.templatePath('src/app/styles/index.styl'), this.destinationPath('src/app/styles/index.styl'));
+      this.fs.copy(this.templatePath('src/app/styles/main.styl'), this.destinationPath('src/app/styles/main.styl'));
     },
 
     assets: function() {

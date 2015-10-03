@@ -18,15 +18,19 @@ describe('starter-pack:app', function () {
       'bower.json',
       'package.json',
       'Gruntfile.coffee',
-      'src',
-      'src/app',
+
       'src/app/index.jade',
-      'src/app/includes',
+
       'src/app/includes/footer.jade',
       'src/app/includes/head.jade',
       'src/app/includes/header.jade',
-      'assets',
-      'assets/images',
+
+      'src/app/styles/common.styl',
+      'src/app/styles/footer.styl',
+      'src/app/styles/header.styl',
+      'src/app/styles/index.styl',
+      'src/app/styles/main.styl',
+
       'assets/images/underconstruction.gif',
       '.gitignore'
     ]);
