@@ -23,7 +23,7 @@ describe('starter-pack:app', function () {
   });
 
   it('inserts user info into project files', function () {
-    assert.fileContent('bower.json', /"name": "Starter Pack"/);
-    assert.fileContent('package.json', /"name": "Starter Pack"/);
+    assert.fileContent('bower.json', /"name": "starter-pack"/);
+    assert.fileContent('package.json', /"name": "starter-pack"/);
   });
 });
