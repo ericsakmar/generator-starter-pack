@@ -17,6 +17,7 @@ describe('starter-pack:app', function () {
     assert.file([
       'bower.json',
       'package.json',
+      'Gruntfile.coffee',
       '.editorconfig',
       '.jshintrc',
       '.gitignore'

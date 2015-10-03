@@ -31,6 +31,7 @@ module.exports = yeoman.generators.Base.extend({
     app: function () {
       this.fs.copy(this.templatePath('_package.json'), this.destinationPath('package.json'));
       this.fs.copy(this.templatePath('_bower.json'), this.destinationPath('bower.json'));
+      this.fs.copy(this.templatePath('_Gruntfile.coffee'), this.destinationPath('Gruntfile.coffee'));
     },
 
     projectfiles: function () {
