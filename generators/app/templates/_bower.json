@@ -1,6 +1,18 @@
 {
-  "name": "package",
-  "version": "0.0.0",
-  "dependencies": {}
-}
+  "name": "Starter Pack",
+  "version": "1.0.0",
 
+  "dependencies": {
+    "reset-css": "~2.0.2011012602"
+  },
+
+  "devDependencies": { },
+
+  "exportsOverride": {
+    "reset-css": {
+      "lib": [
+        "reset.css"
+      ]
+    }
+  }
+}
