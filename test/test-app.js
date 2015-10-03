@@ -21,6 +21,9 @@ describe('starter-pack:app', function () {
       'src',
       'src/app',
       'src/app/index.jade',
+      'assets',
+      'assets/images',
+      'assets/images/underconstruction.gif',
       '.gitignore'
     ]);
   });
