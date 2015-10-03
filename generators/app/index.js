@@ -28,19 +28,10 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: {
-    app: function () {
+    root: function () {
       this.fs.copy(this.templatePath('_package.json'), this.destinationPath('package.json'));
       this.fs.copy(this.templatePath('_bower.json'), this.destinationPath('bower.json'));
       this.fs.copy(this.templatePath('_Gruntfile.coffee'), this.destinationPath('Gruntfile.coffee'));
-    },
-
-    projectfiles: function () {
-      this.fs.copy(this.templatePath('editorconfig'), this.destinationPath('.editorconfig'));
-      this.fs.copy(this.templatePath('jshintrc'), this.destinationPath('.jshintrc')
-      );
-    },
-
-    git: function() {
       this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'))
     }
   },

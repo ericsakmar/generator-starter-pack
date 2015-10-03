@@ -18,8 +18,6 @@ describe('starter-pack:app', function () {
       'bower.json',
       'package.json',
       'Gruntfile.coffee',
-      '.editorconfig',
-      '.jshintrc',
       '.gitignore'
     ]);
   });
