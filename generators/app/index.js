@@ -1,7 +1,8 @@
 'use strict';
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
+var yeoman = require('yeoman-generator'),
+    chalk = require('chalk'),
+    yosay = require('yosay'),
+    slugify = require("underscore.string/slugify");
 
 module.exports = yeoman.generators.Base.extend({
   prompting: function () {
@@ -13,15 +14,15 @@ module.exports = yeoman.generators.Base.extend({
     ));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      type    : 'input',
+      name    : 'name',
+      message : 'Your project name',
+      default : this.appname // Default to current folder name
     }];
 
     this.prompt(prompts, function (props) {
+      props.projectName = slugify(props.name);
       this.props = props;
-      // To access props later use this.props.someOption;
 
       done();
     }.bind(this));
@@ -29,8 +30,8 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     root: function () {
-      this.fs.copy(this.templatePath('_package.json'), this.destinationPath('package.json'));
-      this.fs.copy(this.templatePath('_bower.json'), this.destinationPath('bower.json'));
+      this.fs.copyTpl(this.templatePath('_package.json'), this.destinationPath('package.json'), this.props);
+      this.fs.copyTpl(this.templatePath('_bower.json'), this.destinationPath('bower.json'), this.props);
       this.fs.copy(this.templatePath('_Gruntfile.coffee'), this.destinationPath('Gruntfile.coffee'));
       this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'))
     },

@@ -1,5 +1,5 @@
 {
-  "name": "starter-pack",
+  "name": "<%= projectName %>",
   "version": "1.0.0",
 
   "dependencies": {

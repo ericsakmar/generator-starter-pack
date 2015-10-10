@@ -9,7 +9,7 @@ describe('starter-pack:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../generators/app'))
       .withOptions({ skipInstall: true })
-      .withPrompts({ someOption: true })
+      .withPrompts({ name: 'Starter Pack Test' })
       .on('end', done);
   });
 
@@ -37,7 +37,7 @@ describe('starter-pack:app', function () {
   });
 
   it('inserts user info into project files', function () {
-    assert.fileContent('bower.json', /"name": "starter-pack"/);
-    assert.fileContent('package.json', /"name": "starter-pack"/);
+    assert.fileContent('bower.json', /"name": "starter-pack-test"/);
+    assert.fileContent('package.json', /"name": "starter-pack-test"/);
   });
 });
