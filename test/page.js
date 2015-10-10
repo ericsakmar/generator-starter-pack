@@ -15,6 +15,8 @@ describe('StarterPack:generators/page', function () {
   it('creates files', function () {
     assert.file([
       'src/app/newpage.jade',
+      'src/app/styles/newpage.styl',
+      'src/app/scripts/newpage.coffee',
     ]);
   });
 });
