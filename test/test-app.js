@@ -31,6 +31,8 @@ describe('starter-pack:app', function () {
       'src/app/styles/index.styl',
       'src/app/styles/main.styl',
 
+      'src/app/scripts/app.coffee',
+
       'src/assets/images/underconstruction.gif',
       '.gitignore'
     ]);

@@ -6,3 +6,4 @@ A Yeoman generator with structure & tools for speedy web development, including:
 * imagemin
 * jade
 * stylus
+* coffeescript

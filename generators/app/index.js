@@ -48,6 +48,8 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(this.templatePath('src/app/styles/header.styl'), this.destinationPath('src/app/styles/header.styl'));
       this.fs.copy(this.templatePath('src/app/styles/index.styl'), this.destinationPath('src/app/styles/index.styl'));
       this.fs.copy(this.templatePath('src/app/styles/main.styl'), this.destinationPath('src/app/styles/main.styl'));
+
+      this.fs.copyTpl(this.templatePath('src/app/scripts/app.coffee'), this.destinationPath('src/app/scripts/app.coffee'), this.props);
     },
 
     assets: function() {

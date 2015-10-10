@@ -32,6 +32,11 @@ module.exports = (grunt) ->
           }
         ]
 
+    coffee:
+      compile:
+        files:
+          './dist/scripts/app.js': ['./src/app/scripts/*.coffee']
+
     watch:
       jade:
         files: ['./src/app/**/*.jade']
@@ -44,6 +49,10 @@ module.exports = (grunt) ->
       images:
         files: ['./src/app/assets/images/*.{png,jpg,gif}']
         tasks: ['imagemin']
+
+      scripts:
+        files: ['./src/app/scripts/*.coffee']
+        tasks: ['coffee']
 
     connect:
       server:
@@ -58,7 +67,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-imagemin'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
 
-  grunt.registerTask 'dist', ['clean', 'bower', 'stylus', 'jade', 'imagemin']
+  grunt.registerTask 'dist', ['clean', 'bower', 'stylus', 'jade', 'coffee', 'imagemin']
   grunt.registerTask 'serve', ['dist', 'connect:server', 'watch']
   grunt.registerTask 'default', ['dist']
