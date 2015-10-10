@@ -31,7 +31,7 @@ describe('starter-pack:app', function () {
       'src/app/styles/index.styl',
       'src/app/styles/main.styl',
 
-      'assets/images/underconstruction.gif',
+      'src/assets/images/underconstruction.gif',
       '.gitignore'
     ]);
   });

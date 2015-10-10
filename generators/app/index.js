@@ -51,7 +51,7 @@ module.exports = yeoman.generators.Base.extend({
     },
 
     assets: function() {
-      this.fs.copy(this.templatePath('assets/images/underconstruction.gif'), this.destinationPath('assets/images/underconstruction.gif'));
+      this.fs.copy(this.templatePath('src/assets/images/underconstruction.gif'), this.destinationPath('src/assets/images/underconstruction.gif'));
     }
   },
 
