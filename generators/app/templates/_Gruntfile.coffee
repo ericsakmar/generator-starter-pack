@@ -70,5 +70,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
 
   grunt.registerTask 'dist', ['clean', 'bower', 'stylus', 'jade', 'coffee', 'imagemin']
-  grunt.registerTask 'serve', ['dist', 'connect:server', 'watch']
+  grunt.registerTask 'serve', ['connect:server', 'watch']
   grunt.registerTask 'default', ['dist']
