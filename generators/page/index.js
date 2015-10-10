@@ -11,8 +11,12 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: function () {
-    this.fs.copy(this.templatePath('page.jade'), this.destinationPath('src/app/' + this.name + '.jade'));
-    this.fs.copy(this.templatePath('page.styl'), this.destinationPath('src/app/styles/' + this.name + '.styl'));
-    this.fs.copy(this.templatePath('page.coffee'), this.destinationPath('src/app/scripts/' + this.name + '.coffee'));
+    var p = {
+      name: this.name
+    };
+
+    this.fs.copyTpl(this.templatePath('page.jade'), this.destinationPath('src/app/' + this.name + '.jade'), p);
+    this.fs.copyTpl(this.templatePath('page.styl'), this.destinationPath('src/app/styles/' + this.name + '.styl'), p);
+    this.fs.copyTpl(this.templatePath('page.coffee'), this.destinationPath('src/app/scripts/' + this.name + '.coffee'), p);
   }
 });

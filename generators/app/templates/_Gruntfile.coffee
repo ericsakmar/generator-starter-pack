@@ -12,9 +12,13 @@ module.exports = (grunt) ->
       compile:
         options:
           pretty: true
-
-        files:
-          "./dist/index.html": ["./src/app/index.jade"]
+        files: [{
+            cwd: './src/app',
+            src: '*.jade',
+            dest: './dist',
+            expand: true,
+            ext: '.html'
+        }]
 
     stylus:
       compile:

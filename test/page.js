@@ -19,4 +19,11 @@ describe('StarterPack:generators/page', function () {
       'src/app/scripts/newpage.coffee',
     ]);
   });
+
+  it('inserts user info into project files', function () {
+    assert.fileContent('src/app/newpage.jade', /section#newpage/);
+    assert.fileContent('src/app/newpage.jade', /h1 newpage/);
+    assert.fileContent('src/app/styles/newpage.styl', /#newpage/);
+    assert.fileContent('src/app/scripts/newpage.coffee', /newpage/);
+  });
 });
