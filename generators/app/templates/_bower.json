@@ -8,11 +8,5 @@
 
   "devDependencies": { },
 
-  "exportsOverride": {
-    "reset-css": {
-      "lib": [
-        "reset.css"
-      ]
-    }
-  }
+  "exportsOverride": { }
 }

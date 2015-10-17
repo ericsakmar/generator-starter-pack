@@ -6,7 +6,7 @@ module.exports = (grunt) ->
     bower:
       install:
         options:
-          targetDir: './dist'
+          targetDir: './dist/lib'
 
     jade:
       compile:
